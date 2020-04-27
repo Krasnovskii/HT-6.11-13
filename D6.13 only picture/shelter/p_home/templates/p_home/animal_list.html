@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<table border="1">
+    {% for animal in object_list %}
+    <tr>
+    	<td><img src="{% if animal.avatar %}{{ animal.avatar.url }}{% endif %}" height="200" alt="picture"></td>
+        <td> {{ animal.name }}</td>
+        <td> {{ animal.type }}</td>
+        <td> {{ animal.breed }}</td>
+        <td> {{ animal.description}}</td>
+        <td> {{ animal.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+	
+
+{% endblock %}

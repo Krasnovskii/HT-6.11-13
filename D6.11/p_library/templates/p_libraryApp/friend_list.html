@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список Должников книг</title>
+</head>
+<body>
+	{% include "p_libraryApp/includes/menu_bar.html"%}
+	<ul>
+		{% for friend in object_list %}
+		    <li>{{ friend.name }} {{ friend.surname }} --- Взял книгу {{ friend.data }}</li>
+		{% endfor %}
+	</ul>
+	<p>В целях безопасности должника можно удалить только через меню администратора, воизбежание обмана =))))))</p>
+</body>
+</html>
